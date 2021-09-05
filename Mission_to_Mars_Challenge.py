@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[191]:
+# In[261]:
 
 
 # Import Splinter and BeautifulSoup
@@ -11,7 +11,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 
 
-# In[192]:
+# In[262]:
 
 
 # Set up Splinter (Set the executable path and initialize Splinter)
@@ -19,7 +19,7 @@ executable_path = {'executable_path': ChromeDriverManager().install()}
 browser = Browser('chrome', **executable_path, headless=False)
 
 
-# In[193]:
+# In[263]:
 
 
 # Visit the mars nasa news site
@@ -29,7 +29,7 @@ browser.visit(url)
 browser.is_element_present_by_css('div.list_text', wait_time=1)
 
 
-# In[194]:
+# In[264]:
 
 
 # Parse the HTML with BeautifulSoup
@@ -38,14 +38,14 @@ news_soup = soup(html, 'html.parser')
 slide_elem = news_soup.select_one('div.list_text') # (.) is used for selecting classes
 
 
-# In[195]:
+# In[265]:
 
 
 # Assign the title and summary text to variables
 slide_elem.find('div', class_='content_title')
 
 
-# In[196]:
+# In[266]:
 
 
 # Use the parent element to find the first `a` tag and save it as `news_title`
@@ -53,7 +53,7 @@ news_title = slide_elem.find('div', class_='content_title').get_text()
 news_title
 
 
-# In[197]:
+# In[267]:
 
 
 # Use the parent element to find the paragraph text
@@ -63,7 +63,7 @@ news_p
 
 # ### JPL Space Images Featured Image
 
-# In[198]:
+# In[268]:
 
 
 # Visit URL
@@ -71,7 +71,7 @@ url = 'https://spaceimages-mars.com'
 browser.visit(url)
 
 
-# In[199]:
+# In[269]:
 
 
 # Find and click the full image button
@@ -79,7 +79,7 @@ full_image_elem = browser.find_by_tag('button')[1]
 full_image_elem.click()
 
 
-# In[200]:
+# In[270]:
 
 
 # Parse the resulting html with soup
@@ -87,7 +87,7 @@ html = browser.html
 img_soup = soup(html, 'html.parser')
 
 
-# In[201]:
+# In[271]:
 
 
 # Find the relative image url
@@ -95,7 +95,7 @@ img_url_rel = img_soup.find('img', class_='fancybox-image').get('src')
 img_url_rel
 
 
-# In[202]:
+# In[272]:
 
 
 # Use the base URL to create an absolute URL
@@ -107,7 +107,7 @@ img_url
 
 # ### Mars Facts
 
-# In[203]:
+# In[273]:
 
 
 # Scrape the entire table from galaxy...site and creat a new DataFrame from the HTML table
@@ -117,13 +117,13 @@ df.set_index('description', inplace=True)
 df
 
 
-# In[204]:
+# In[274]:
 
 
 df.to_html()
 
 
-# In[205]:
+# In[275]:
 
 
 browser.quit()
@@ -135,7 +135,7 @@ browser.quit()
 
 # ### Hemispheres
 
-# In[224]:
+# In[276]:
 
 
 # Set up Splinter (Set the executable path and initialize Splinter)
@@ -143,7 +143,7 @@ executable_path = {'executable_path': ChromeDriverManager().install()}
 browser = Browser('chrome', **executable_path, headless=False)
 
 
-# In[225]:
+# In[277]:
 
 
 # 1. Use browser to visit the URL 
@@ -152,7 +152,7 @@ url = 'https://marshemispheres.com/'
 browser.visit(url)
 
 
-# In[226]:
+# In[278]:
 
 
 html = browser.html
@@ -178,7 +178,7 @@ for i in range(len(links)):
     # hemisphere_page = hemisphere_url.get('href')
     # Crate a link of the page
     # hemisphere_link = url + hemisphere_page
-    # Visite it and parse it to Retrieve the data
+    # Visit it and parse it to Retrieve the data
     # browser.visit(hemisphere_link)    
     # html = browser.html
     # hemispheres = soup(html, 'html.parser')
@@ -203,33 +203,33 @@ for i in range(len(links)):
     browser.back()
 
 
-# In[227]:
+# In[279]:
 
 
 # 4. Print the list that holds the dictionary of each image url and title.
 hemisphere_image_urls
 
 
-# In[228]:
+# In[280]:
 
 
 # 5. Quit the browser
 browser.quit()
 
 
-# In[229]:
+# In[281]:
 
 
 # pip install ipython
 
 
-# In[230]:
+# In[282]:
 
 
 #  pip install nbconvert
 
 
-# In[237]:
+# In[283]:
 
 
 get_ipython().system('ipython nbconvert --to script Mission_to_Mars_Challenge.ipynb')
