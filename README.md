@@ -19,5 +19,5 @@ The analysis was created using next software: Python 3.8.8, Pandas 1.2.4, Jupyte
 
 The result of the data, and the design of the web app to accommodate the scraped full-resolution images of Mars’s hemispheres and the titles of those images is following:
 
-screen images
+![image](https://user-images.githubusercontent.com/68247343/132139109-bcbfca3b-6a73-4d7d-9c46-4f29d31f2554.png)
 
