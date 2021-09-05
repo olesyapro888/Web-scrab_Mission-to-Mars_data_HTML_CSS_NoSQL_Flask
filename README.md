@@ -17,6 +17,6 @@ This assignment consists of three following technical analyses:
 The analysis was created using next software: Python 3.8.8, Pandas 1.2.4, Jupyter-notebook, BeautifulSoup4, Splinter, MongoDB 4.0.2, Flask 1.1.2.
 ## `Mission-to-Mars Analysis Summary`	
 
-The result of the data, and the design of the web app to accommodate the scraped full-resolution images of Mars’s hemispheres and the titles of those images is following:
+The result of the data, and the design of the responsive web app to accommodate the scraped full-resolution images of Mars’s hemispheres and the titles of those images is following:
 
 ![image](https://user-images.githubusercontent.com/68247343/132139639-2c1c4ae6-42dc-48d9-be78-cfbc4eb48573.png)
