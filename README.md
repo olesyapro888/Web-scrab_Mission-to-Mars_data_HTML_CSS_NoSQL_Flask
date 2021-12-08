@@ -1,4 +1,5 @@
-# Mission-to-Mars. Project 10 of the UofT.
+# Mission-to-Mars. The project 10 of the University of Toronto.
+
 ## `-Contents-`	
 	
 - [Overview of the Project](#overview-of-the-Mission-to-Mars-Analysis)
@@ -6,7 +7,7 @@
 - [Mission-to-Mars Analysis Summary](#Mission-to-Mars-Analysis-Summary)	
 ## `Overview of the Mission-to-Mars Analysis`	
 	
-The purpose for the analysis is to scrape full-resolution images of Mars’s hemispheres and the titles of those images by using BeautifulSoup and Splinter, store the scraped data on a Mongo database, to display the data by using a web application, and alter the design of the web app to accommodate these images. 
+The purpose of the analysis is to scrape full-resolution images of Mars’s hemispheres and the titles of those images by using BeautifulSoup and Splinter, store the scraped data on a Mongo database, to display the data by using a web application, and alter the design of the web app to accommodate these images. 
 
 This assignment consists of three following technical analyses:
   1. Scrape Full-Resolution Mars Hemisphere Images and Titles
