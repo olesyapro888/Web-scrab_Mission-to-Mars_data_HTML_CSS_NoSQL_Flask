@@ -1,4 +1,4 @@
-# Mission-to-Mars. The project 10 of the University of Toronto.
+# Flask app Mission to Mars data from the web scrape using BeautifulSoup, Splinter, MongoDB NoSQL database.
 
 ## `-Contents-`	
 	
